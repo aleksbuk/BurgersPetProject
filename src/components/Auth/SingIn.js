@@ -30,7 +30,7 @@ class SingIn extends React.Component {
         const authProvider = new firebase.auth['GithubAuthProvider']();
         firebaseApp
         .auth()
-        .signInWithRedirect(authProvider)
+        .signInWithPopup(authProvider)
         .then(this.authHandler)
         
     }
